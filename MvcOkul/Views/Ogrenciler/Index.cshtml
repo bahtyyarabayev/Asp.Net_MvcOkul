@@ -1,0 +1,56 @@
+﻿@using MvcOkul.Models.EntityFramework
+@model List<TBLOGRENCİLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ÖĞRENCİ ID</th>
+            <th>ÖĞRENCİ ADI</th>
+            <th>ÖĞRENCİ SOYAD</th>
+            <th>ÖĞRENCİ CİNSİYET</th>
+            <th>ÖĞRENCİ KULUP</th>
+            <th>İŞLEMLER</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ogr in Model)
+        {
+            <tr>
+                <td>@ogr.OGRENCİİD</td>
+                <td>@ogr.OGRAD</td>
+                <td>@ogr.OGRSOYADİ</td>
+                <td>@ogr.OGRCİNSİYET</td>
+                <td>@ogr.TBLKULUP.KULUPAD</td>
+                <td>
+                    <a href="/Ogrenciler/Sil/@ogr.OGRENCİİD" class="btn btn-danger">Sil</a>
+                    <a href="/Ogrenciler/ogrgetir/@ogr.OGRENCİİD" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+    </tbody>
+</table>
+<br />
+<a href="/Ogrenciler/YeniOgrenci" class="btn btn-primary">Yeni Öğrenci Kaydı</a>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(function () {
+        $('#tbl1').DataTable();
+    });
+</script>
+
+
+
+
+

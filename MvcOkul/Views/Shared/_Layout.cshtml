@@ -1,0 +1,106 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Mvc Öğrenci Kayıt Sistemi</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="~/Dosyalar1/StyleSheet2.css" rel="stylesheet" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Öğrenci Not Sistemi</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="/Ogrenciler/Index">
+                        <i class="fas fa-users"></i>
+                        Öğrenci Listesi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Default/Index">
+                        <i class="fas fa-book"></i>
+                        Dersler
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Kulupler/Index">
+                        <i class="fas fa-layer-group"></i>
+                        Külüpler
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Notlar/Index">
+                        <i class="fas fa-chart-bar"></i>
+                        Sınav Notları
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-images"></i>
+                        Galeri
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- jQuery (SLIM DEĞİL) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Sidebar Script -->
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

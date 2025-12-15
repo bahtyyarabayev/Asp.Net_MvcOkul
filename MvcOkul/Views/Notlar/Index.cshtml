@@ -1,0 +1,67 @@
+﻿@using MvcOkul.Models.EntityFramework
+@model List<TBLNOTLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>NOT ID</th>
+            <th>ÖĞRENCİ AD</th>
+            <th>DERS ID</th>
+            <th>SINAV1</th>
+            <th>SINAV2</th>
+            <th>SINAV3</th>
+            <th>PROJE</th>
+            <th>ORTALAMA</th>
+            <th>DURUM</th>
+            <th>GÜNCELLE</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var not in Model)
+        {
+            <tr>
+                <td>@not.NOTİD</td>
+                <td>@not.TBLOGRENCİLER.OGRAD</td>
+                <td>@not.TBLDERSLER.DERSAD</td>
+                <td>@not.SINAV1</td>
+                <td>@not.SINAV2</td>
+                <td>@not.SINAV3</td>
+                <td>@not.PROJE</td>
+                <td>@not.ORTALAMA</td>
+                <td>
+                    @if (not.DURUM == true)
+                    {
+                        <span class="badge badge-success">GEÇTİ</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger">KALDI</span>
+                    }
+                </td>
+
+                <td>
+                    <a href="/Notlar/notgetir/@not.NOTİD" class="btn btn-warning">Güncelle</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a href="/Notlar/YeniNot" class="btn btn-primary">Yeni Not Girişi</a>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(function () {
+        $('#tbl1').DataTable();
+    });
+</script>
+
