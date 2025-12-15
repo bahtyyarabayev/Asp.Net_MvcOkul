@@ -73,6 +73,31 @@ Projeyi yerel makinenizde çalıştırmak için şu adımları izleyebilirsiniz:
 5.  Bir Pull Request (PR) oluşturun.
 
 ---
+## 📸 Ekran Görüntüleri
 
-*Bu proje eğitim amaçlı geliştirilmiştir.*
+Projenin temel menülerine ait ekran görüntüleri aşağıdadır:
+
+### 🎓 Öğrenci İşlemleri
+Öğrenci listesi, arama yapma ve silme işlemlerinin yapıldığı ekran.
+![Öğrenci Listesi](ograna.png)
+
+---
+
+### 📚 Ders Listesi
+Müfredattaki derslerin görüntülendiği ve yönetildiği ekran.
+![Ders Listesi](dersana.png)
+
+---
+
+### 🎭 Kulüp İşlemleri
+Öğrenci kulüplerinin listelendiği yönetim paneli.
+![Kulüp Listesi](kulupana.png)
+
+---
+
+### 📝 Sınav Notları
+Öğrencilerin sınav notlarının girildiği ekran.
+![Not Listesi](sinavana.png)
+
+---
  
